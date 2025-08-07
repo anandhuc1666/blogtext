@@ -11,16 +11,18 @@ function User() {
   },[])
   return (
 
-    <div className='w-full h-dvh bg-violet-700  justify-center  items-center flex flex-col '>
-{
+    <div className='w-full h-dvh bg-violet-700  justify-center  items-center flex  '>
+<div className='mt-[100px] w-[800px] h-[500px] overflow-y-scroll hide-scrollbar '>
+  {
   state.map(e=>{
-   return <div className='w-[1000px] h-[100px] bg-amber-100 rotate-2 rounded-3xl p-[20px] my-[5px]'>
+   return <div className='w-[700px] h-[100px] bg-amber-100 rotate-2 rounded-3xl p-[20px] my-[5px] inset-shadow-sm inset-shadow-indigo-500 '>
         <h1 className='font-semibold'>{e.name}</h1>
         <p className='text-[#3a3737]'>{e.area}</p>
       </div>
   })
 }
 
+</div>
 
     </div>
   )

@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 function Blog() {
-
+const Navigate=useNavigate()
 const[text,setText]=useState({
   name:'',
   area:''
@@ -17,6 +17,7 @@ axios.post('http://localhost:5000/posts',text)
 .catch(err=>{
   console.log('data 404',err)
 })
+Navigate('/User')
 }
 
   return (
